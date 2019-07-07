@@ -10,6 +10,9 @@ class WeatherModel {
 
     NetworkHelper networkHelper =NetworkHelper(url: 
     '$kOpenWeatherBaseURL?lat=${location.latitude}&lon=${location.longitude}&appid=$kAPIKey&units=imperial');
+
+    var weatherData = await networkHelper.getData();
+    return weatherData;
   }
 
 
