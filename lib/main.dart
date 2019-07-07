@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:doggie_weather/screens/loading_screen.dart';
+import 'package:doggie_weather/utilities/constants.dart';
+
 
 void main() => runApp(DoggieWeather());
 
@@ -7,11 +10,11 @@ class DoggieWeather extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: kAppTitle,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: LoadingScreen(),
     );
   }
 }
