@@ -41,7 +41,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
               children: <Widget>[
                 SpinKitPulse(
                     color: Colors.grey[350],
-                    size: 90.0
+                    size: 130.0
                   ),
                 Padding(
                   padding: EdgeInsets.all(15.0),
