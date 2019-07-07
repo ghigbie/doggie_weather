@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:doggie_weather/utilities/constants.dart';
 
 class LoadingScreen extends StatefulWidget {
   @override
@@ -22,29 +23,39 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('images/loading_dog.jpg'),
-          fit: BoxFit.cover,
-          colorFilter: ColorFilter.mode(
-            Colors.white.withOpacity(0.7),
-            BlendMode.dstATop
+    return Scaffold(
+          body: Center(
+            child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('images/loading_dog.jpg'),
+                  fit: BoxFit.cover,
+                  colorFilter: ColorFilter.mode(
+                    Colors.white.withOpacity(0.9),
+                    BlendMode.dstATop
+                    ),
+                  )
+                ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                SpinKitPulse(
+                    color: Colors.grey[350],
+                    size: 90.0
+                  ),
+                Padding(
+                  padding: EdgeInsets.all(15.0),
+                  child: Text(
+                    'We are listeing for the weather in your area...',
+                    style: kLoadingPageTextStyle,
+                    textAlign: TextAlign.center,
+                    ),
+                )
+              ],
             ),
-          )
+        )
         ),
-      child: Container(
-        margin:EdgeInsets.only(bottom: 250.0),
-        child: Column(
-          children: <Widget>[
-            SpinKitPulse(
-                color: Colors.white,
-                size: 90.0
-              ),
-            Text('We are listeing for the weather in your area...')
-          ],
-        ),
-      )
-      );
+          ),
+    );
   }
 }
