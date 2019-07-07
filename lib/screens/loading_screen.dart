@@ -25,7 +25,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('images/loading_dog.jpeg'),
+          image: AssetImage('images/loading_dog.jpg'),
           fit: BoxFit.cover,
           colorFilter: ColorFilter.mode(
             Colors.white.withOpacity(0.2),
