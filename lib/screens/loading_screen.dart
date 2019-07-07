@@ -28,16 +28,22 @@ class _LoadingScreenState extends State<LoadingScreen> {
           image: AssetImage('images/loading_dog.jpg'),
           fit: BoxFit.cover,
           colorFilter: ColorFilter.mode(
-            Colors.white.withOpacity(0.2),
+            Colors.white.withOpacity(0.7),
             BlendMode.dstATop
             ),
           )
         ),
-      child: Center(
-        child: SpinKitPulse(
-          color: Colors.white,
-          size: 50.0
-        )
+      child: Container(
+        margin:EdgeInsets.only(bottom: 250.0),
+        child: Column(
+          children: <Widget>[
+            SpinKitPulse(
+                color: Colors.white,
+                size: 90.0
+              ),
+            Text('We are listeing for the weather in your area...')
+          ],
+        ),
       )
       );
   }
