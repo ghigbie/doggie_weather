@@ -14,11 +14,6 @@ class _LoadingScreenState extends State<LoadingScreen> {
   double latitude;
   double longitude;
 
-  void getLocationData() async {
-    WeatherModel weatherModel = WeatherModel();
-    var weatherData = await weatherModel.getLocationWeather();
-  }
-
   void pageForward(weatherData){
     Navigator.push(context, MaterialPageRoute(
       builder: (context) {
@@ -27,9 +22,18 @@ class _LoadingScreenState extends State<LoadingScreen> {
     );
   }
 
+  void getLocationData() async {
+    WeatherModel weatherModel = WeatherModel();
+    var weatherData = await weatherModel.getLocationWeather();
+
+    pageForward(weatherData);
+  }
+
+
   @override
   void initState() {
     super.initState();
+    getLocationData();
   }
 
   @override
