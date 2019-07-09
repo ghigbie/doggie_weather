@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:doggie_weather/components/back_button_ios.dart';
+import 'package:doggie_weather/components/text_button.dart';
+import 'package:doggie_weather/utilities/constants.dart';
 
 class CityScreen extends StatefulWidget {
   @override
@@ -7,6 +9,8 @@ class CityScreen extends StatefulWidget {
 }
 
 class _CityScreenState extends State<CityScreen> {
+  String cityName;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +28,20 @@ class _CityScreenState extends State<CityScreen> {
               Align(
                 alignment: Alignment.topLeft,
                 child: BackButtonIOS(),
-              )
+              ),
+              Container(
+                padding: EdgeInsets.all(20.0),
+                child:TextField(
+                  style:TextStyle(
+                    color: Colors.black,
+                  ),
+                  decoration: kTextFieldInputDecoration,
+                  onChanged: (value){
+                    cityName = value;
+                  }
+                ),
+              ),
+              TextButton(context, cityName),
             ],
           )
         )
