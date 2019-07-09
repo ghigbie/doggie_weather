@@ -15,6 +15,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   double longitude;
 
   void pageForward(weatherData){
+    print('navigation called');
     Navigator.push(context, MaterialPageRoute(
       builder: (context) {
         return LocationScreen(locationWeather: weatherData);
