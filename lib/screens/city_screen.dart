@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:doggie_weather/components/back_button_ios.dart';
-import 'package:doggie_weather/components/text_button.dart';
 import 'package:doggie_weather/utilities/constants.dart';
 
 class CityScreen extends StatefulWidget {
