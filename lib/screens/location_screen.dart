@@ -22,20 +22,24 @@ class _LocationScreenState extends State<LocationScreen> {
 
   void updateUI(dynamic weatherData){
     setState((){
-      if(!weatherData){
+      if(weatherData == null){
         temperature = 0;
         cityName = 'Not available';
         weatherMessage = '';
         selectedImage = 'cold_dog';
       }
 
-      //need to write updates for weather here
+      temperature = weatherData['main']['temp'].toInt();
+      int condition = weatherData['weather'][0]['id'];
+      cityName = weatherData['name'];
+      weatherMessage = weatherModel.getMessage(condition);
     });
   }
 
   @override
   void initState() {
     super.initState();
+    updateUI(widget.locationWeather);
   }
   
   @override
@@ -107,7 +111,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 child: Text(
                   "$weatherMessage in $cityName!",
                   textAlign: TextAlign.right,
-                  //style: need a style here
+                  style: kMessageTextStyle,
                 )
               )
             ],

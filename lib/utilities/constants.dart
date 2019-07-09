@@ -13,6 +13,11 @@ const kTempTextStyle = TextStyle(
   fontSize: 100.0,
 );
 
+const kMessageTextStyle = TextStyle(
+  fontFamily: 'Spartan MB',
+  fontSize: 60.0,
+);
+
 const kTextFieldInputDecoration = InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
