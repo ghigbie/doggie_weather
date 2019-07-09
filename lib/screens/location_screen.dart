@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:doggie_weather/services/weather.dart';
 import 'package:doggie_weather/screens/city_screen.dart';
+import 'package:doggie_weather/utilities/constants.dart';
 
 
 class LocationScreen extends StatefulWidget {
@@ -63,6 +64,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     FlatButton(
                       onPressed: () async{
                         var weatherData = await weatherModel.getLocationWeather();
+                        updateUI(weatherData);
                       },
                       child: Icon(
                         Icons.near_me,
@@ -95,7 +97,7 @@ class _LocationScreenState extends State<LocationScreen> {
                   children: <Widget>[
                     Text(
                       '$temperature°',
-                      //style: need a style here
+                       style: kTempTextStyle,
                     )
                   ],
                 )

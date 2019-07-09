@@ -20,6 +20,7 @@ class WeatherModel {
     '$kOpenWeatherBaseURL?lat=${location.latitude}&lon=${location.longitude}&appid=$kAPIKey&units=imperial');
 
     var weatherData = await networkHelper.getData();
+    print(weatherData);
     return weatherData;
   }
 

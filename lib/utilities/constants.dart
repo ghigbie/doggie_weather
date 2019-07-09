@@ -8,6 +8,11 @@ const kLoadingPageTextStyle = TextStyle(
   color: Color(0xff242424),
 );
 
+const kTempTextStyle = TextStyle(
+  fontFamily: 'Spartan MB',
+  fontSize: 100.0,
+);
+
 const kTextFieldInputDecoration = InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
