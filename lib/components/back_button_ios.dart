@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class BackButton extends StatelessWidget {
+class BackButtonIOS extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlatButton(
