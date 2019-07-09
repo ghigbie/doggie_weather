@@ -75,8 +75,26 @@ class _LocationScreenState extends State<LocationScreen> {
                       )
                     )
                   ]
+                ),
+              Padding(
+                padding:EdgeInsets.only(left: 15.0),
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      '$temperature°',
+                      //style: need a style here
+                    )
+                  ],
                 )
-
+              ),
+              Padding(
+                padding: EdgeInsets.only(right: 15.0),
+                child: Text(
+                  "$weatherMessage in $cityName!",
+                  textAlign: TextAlign.right,
+                  //style: need a style here
+                )
+              )
             ],
           )
         ),
