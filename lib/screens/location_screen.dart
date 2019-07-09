@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:doggie_weather/services/weather.dart';
+import 'package:doggie_weather/screens/city_screen.dart';
+
 
 class LocationScreen extends StatefulWidget {
   LocationScreen({this.locationWeather});
@@ -11,6 +13,7 @@ class LocationScreen extends StatefulWidget {
 
 class _LocationScreenState extends State<LocationScreen> {
   
+  WeatherModel weatherModel = WeatherModel();
   int temperature;
   String cityName;
   String weatherMessage;
@@ -58,8 +61,8 @@ class _LocationScreenState extends State<LocationScreen> {
                   mainAxisAlignment:MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     FlatButton(
-                      onPressed: () {
-
+                      onPressed: () async{
+                        var weatherData = await weatherModel.getLocationWeather();
                       },
                       child: Icon(
                         Icons.near_me,
@@ -75,10 +78,9 @@ class _LocationScreenState extends State<LocationScreen> {
                             }),
                         );
                           if(typedName != null){
-                            var weatherData = await weather.getCityWeather(typedName);
+                            var weatherData = await weatherModel.getCityWeather(typedName);
                             updateUI(weatherData);
                           }
-                        ),
                       },
                       child: Icon(
                         Icons.location_city,
