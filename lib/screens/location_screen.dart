@@ -33,6 +33,7 @@ class _LocationScreenState extends State<LocationScreen> {
       int condition = weatherData['weather'][0]['id'];
       cityName = weatherData['name'];
       weatherMessage = weatherModel.getMessage(condition);
+      selectedImage = weatherModel.getDoggiePicture(condition);
     });
   }
 
