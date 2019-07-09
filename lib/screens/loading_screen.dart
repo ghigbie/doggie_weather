@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:doggie_weather/services/weather.dart';
+import 'package:doggie_weather/screens/location_screen.dart';
 import 'package:doggie_weather/utilities/constants.dart';
 
 class LoadingScreen extends StatefulWidget {
@@ -12,8 +14,17 @@ class _LoadingScreenState extends State<LoadingScreen> {
   double latitude;
   double longitude;
 
-  void getLocation() async {
+  void getLocationData() async {
+    WeatherModel weatherModel = WeatherModel();
+    var weatherData = await weatherModel.getLocationWeather();
+  }
 
+  void pageForward(weatherData){
+    Navigator.push(context, MaterialPageRoute(
+      builder: (context) {
+        return LocationScreen(locationWeather: weatherData);
+      }),
+    );
   }
 
   @override

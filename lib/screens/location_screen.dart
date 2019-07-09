@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class LocationScreen extends StatefulWidget {
+  LocationScreen({this.locationWeather});
+  final locationWeather;
+
   @override
   _LocationScreenState createState() => _LocationScreenState();
 }
@@ -45,10 +48,35 @@ class _LocationScreenState extends State<LocationScreen> {
               ),
             ),
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              
+          child: SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    FlatButton(
+                      onPressed: () {
+
+                      },
+                      child: Icon(
+                        Icons.near_me,
+                        size: 50.0
+                      )
+                    ),
+                    FlatButton(
+                      onPressed: (){
+
+                      },
+                      child: Icon(
+                        Icons.location_city,
+                        size: 50.0
+                      )
+                    )
+                  ]
+                )
+
             ],
           )
         ),
