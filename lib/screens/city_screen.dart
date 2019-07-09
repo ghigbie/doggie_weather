@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:doggie_weather/components/back_button_ios.dart';
 
 class CityScreen extends StatefulWidget {
   @override
@@ -22,15 +23,7 @@ class _CityScreenState extends State<CityScreen> {
             children: <Widget>[
               Align(
                 alignment: Alignment.topLeft,
-                child: FlatButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  child: Icon(
-                    Icons.arrow_back_ios,
-                    size: 50.0
-                  )
-                )
+                child: BackButtonIOS(),
               )
             ],
           )
