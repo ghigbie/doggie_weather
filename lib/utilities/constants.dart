@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
 
 const kAppTitle = 'Doggie Weather';
+const kAppBlack = Color(0xff242424);
 
 const kLoadingPageTextStyle = TextStyle(
   fontFamily: 'Spartan MB',
   fontSize: 24.0,
-  color: Color(0xff242424),
+  color: kAppBlack
 );
 
 const kTempTextStyle = TextStyle(
   fontFamily: 'Spartan MB',
-  fontSize: 100.0,
+  fontSize: 70.0,
+  color: kAppBlack
 );
 
 const kMessageTextStyle = TextStyle(
   fontFamily: 'Spartan MB',
-  fontSize: 60.0,
+  fontSize: 30.0,
+  color: kAppBlack
 );
 
 const kTextFieldInputDecoration = InputDecoration(
