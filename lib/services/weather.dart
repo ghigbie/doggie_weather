@@ -27,19 +27,21 @@ class WeatherModel {
 
   String getDoggiePicture(int condition){
     if (condition < 300){
-      return 'slightly sad dog';
+      return 'rain_coat_dog';
     } else if (condition < 400) {
-      return 'more sad dog';
+      return 'drizzle_dog';
     } else if (condition < 600) {
       return 'very sad dog';
+    } else if (condition < 612){ //light snow
+      return 'cold_dog_blanket';
     } else if (condition < 700) {
-      return 'dog in sweater';
+      return 'dog_in_snow';
     } else if (condition < 800) {
-      return 'dog in t shirt';
-    } else if (condition == 800) {
+      return 'stay_inside_dog';
+    } else if (condition < 801 ){
       return 'sunglass_dog';
     } else if (condition <= 804) {
-      return 'happy dog';
+      return 'clody_dog';
     } else {
       return 'neutral dog';
     }
