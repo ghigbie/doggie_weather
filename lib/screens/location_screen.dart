@@ -32,8 +32,8 @@ class _LocationScreenState extends State<LocationScreen> {
       temperature = weatherData['main']['temp'].toInt();
       int condition = weatherData['weather'][0]['id'];
       cityName = weatherData['name'];
-      weatherMessage = weatherModel.getMessage(condition);
-      //selectedImage = weatherModel.getDoggiePicture(condition);
+      weatherMessage = weatherModel.getMessage(temperature);
+      selectedImage = weatherModel.getDoggiePicture(condition);
     });
   }
 
