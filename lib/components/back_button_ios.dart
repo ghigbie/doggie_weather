@@ -9,7 +9,8 @@ class BackButtonIOS extends StatelessWidget {
       },
       child: Icon(
         Icons.arrow_back_ios,
-        size: 50.0
+        size: 50.0,
+        color:Color(0xffffffff)
       )
     );
   }

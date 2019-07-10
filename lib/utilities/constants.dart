@@ -5,8 +5,14 @@ const kAppBlack = Color(0xff242424);
 
 const kLoadingPageTextStyle = TextStyle(
   fontFamily: 'Spartan MB',
-  fontSize: 24.0,
+  fontSize: 20.0,
   color: kAppBlack
+);
+
+const kButtonTextStyle = TextStyle(
+  fontFamily: 'Spartan MB',
+  fontSize: 16.0,
+  color: Color(0xff424242)
 );
 
 const kTempTextStyle = TextStyle(

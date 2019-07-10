@@ -40,15 +40,29 @@ class _CityScreenState extends State<CityScreen> {
                   }
                 ),
               ),
-              FlatButton(
+              RaisedButton(
                 onPressed: () {
                   Navigator.pop(context, cityName);
                 },
-                child: Text(
-                  'Get Weather', 
-                  //style: I may want to add a style here
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0)),
+                color: Colors.grey[300],
+                textColor: Colors.grey[800],
+                child: Container(
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                      top: 16.0,
+                      bottom: 16.0,
+                      right: 40.0,
+                      left: 40.0
+                    ),
+                    child: Text(
+                      'Get Weather', 
+                      style: kButtonTextStyle,
+                    ),
+                  ),
                 )
-              )
+             )
             ],
           )
         )
