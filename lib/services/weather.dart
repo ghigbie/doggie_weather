@@ -51,11 +51,11 @@ class WeatherModel {
 
   String getMessage(int temp){
     if (temp > 77 ) {
-      return 'It\'s time to give your doggie ice cream!';
+      return 'It\'s time to give your doggie ice cream';
     } else if (temp > 62) {
       return 'Take off your doggies\'s sweater';
     } else if (temp < 50) {
-      return 'Put sweater or jacket on your doggie. It\'s cold!';
+      return 'It\'s cold! Put sweater or jacket on your doggie';
     } else {
       return 'Bring a doggie 🧥 just in case';
     }
