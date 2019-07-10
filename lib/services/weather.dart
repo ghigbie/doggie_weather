@@ -31,19 +31,21 @@ class WeatherModel {
     } else if (condition < 400) {
       return 'drizzle_dog';
     } else if (condition < 600) {
-      return 'very sad dog';
+      return 'heavy_rain_dog';
     } else if (condition < 612){ //light snow
       return 'cold_dog_blanket';
     } else if (condition < 700) {
       return 'dog_in_snow';
+    } else if (condition < 741 ){
+      return 'foggy_dog';
     } else if (condition < 800) {
       return 'stay_inside_dog';
     } else if (condition < 801 ){
       return 'sunglass_dog';
     } else if (condition <= 804) {
-      return 'clody_dog';
+      return 'cloudy_dog';
     } else {
-      return 'neutral dog';
+      return 'happy_dog';
     }
   }
 
