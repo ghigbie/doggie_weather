@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:doggie_weather_2/screens/loading_screen.dart';
 
 void main() => runApp(MyApp());
 
