@@ -1,7 +1,6 @@
-package com.example.doggie_weather;
+package io.trainingtrack.doggie_weather_2;
 
 import android.os.Bundle;
-
 import io.flutter.app.FlutterActivity;
 import io.flutter.plugins.GeneratedPluginRegistrant;
 
