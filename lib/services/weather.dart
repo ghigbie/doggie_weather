@@ -43,7 +43,7 @@ class WeatherModel {
     } else if (condition < 801 ){
       return 'sunglass_dog';
     } else if (condition <= 804) {
-      return 'cloudy_dog2';
+      return 'cloudy_dog';
     } else {
       return 'happy_dog';
     }
